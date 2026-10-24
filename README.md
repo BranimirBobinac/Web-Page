@@ -79,8 +79,8 @@ The site uses an external API provided for the course:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/<repository-name>.git
-   cd <repository-name>
+   git clone https://github.com/<BranimirBobinac>/<Web-Page>.git
+   cd <Web-Page>
    ```
 2. Serve the folder with any static web server. A local server is better than opening the file directly, because some browsers restrict `fetch` and `sessionStorage` on `file://` URLs. Pick one:
    ```bash
@@ -98,7 +98,7 @@ The site uses an external API provided for the course:
 1. Push the project to a GitHub repository.
 2. Go to **Settings → Pages**.
 3. Under *Source*, choose **Deploy from a branch**. Select the `main` branch and the `/ (root)` folder.
-4. The site will be available at `https://<your-username>.github.io/<repository-name>/`.
+4. The site will be available at `https://<BranimirBobinac>.github.io/<Web-Page>/`.
 
 ## Usage
 
