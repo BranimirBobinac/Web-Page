@@ -1,0 +1,757 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-size: 62%;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    overflow-x: clip;
+    color: black;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.mt-custom {
+    margin-top: 12vh !important;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    font-size: 20px;
+    background: #000;
+    color: #fff;
+    padding: 12px 0;
+    z-index: 1000;
+}
+
+logreg {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f4f4f4;
+    font-size: 150%;
+}
+
+content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/*unused for now*/
+/* #sparkGifContainer {
+    display: inline-block;
+    vertical-align: middle;
+} */
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*Login/register------------------------------------------------------------------------------------------*/
+
+.logreg-container {
+    background: #201e1e;
+    padding: 3em;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    width: 500px;
+    text-align: center;
+}
+
+.logreg-logo img {
+    width: 100px;
+    margin-bottom: 2em;
+    transition: transform 0.5s ease-in-out;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 1.5em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: .75em;
+    color: #ffffff;
+    font-size: 1.1em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.logreg-button {
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logreg-button:hover {
+    background-color: #0056b3;
+}
+
+.logreg-footer {
+    margin-top: 3em;
+    font-size: 1em;
+    color: #ffffff;
+}
+
+.newUser{
+    color: white;
+}
+
+.haveAcc{
+    color: white;
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+.text {
+    font-size: 3vh;
+    z-index: 1;
+}
+
+/*Navigacijska traka-------------------------------------------------------------------------------------*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.trakaLFunk {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.selected {
+    color: yellow !important;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    margin-left: 2rem;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu li a i {
+    margin-right: 0.5rem;
+}
+
+.navbar-right a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+.navbar-right a i {
+    margin-right: 1rem;
+}
+
+.navicon-blue {
+    color: blue;
+}
+
+.navicon {
+    color: orange;
+}
+
+/* hamburger gumb ne smije naslijediti globalni stil gumba (width: 100%, crveni hover) */
+.trakaLFunk,
+.trakaLFunk:hover {
+    width: auto;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    opacity: 1;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/*Navigacijska traka okomita-----------------------------------------------------------------------*/
+
+
+#NVR, #KDN, #POV, #ALG{
+    scroll-margin-top:120px;
+}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10001;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+.section {
+    padding: 60px;
+    margin: 20px;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
+/*Početna video--------------------------------------------------------------------------------------------*/
+
+#backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:white;
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+.animate__animated.animate__fadeInDown {
+    --animate-duration: 2s;
+}
+
+.news-mt {
+    margin-top: 5rem;
+}
+
+
+
+/* CSS za konakt ---------------------------------------------------------------------------------------*/
+
+input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.kontakt {
+    font-size: 15px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.ui-dialog .ui-dialog-title {
+    font-size: 20px;
+}
+
+.contact-title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+#submitBtn{
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+button, input[type="submit"] {
+    background: white;
+    color: black;
+    font-weight: bold;
+    border: solid black 1px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 2px;
+}
+
+button:hover, input[type="submit"]:hover {
+    opacity: 0.8;
+    background-color: #ff0000;
+    color: white;
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*Footer--------------------------------------------------------------------------------------------------*/
+footer {
+    position: relative;
+    margin-top: auto;
+}
+
+.custom-footer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 4vh;
+    font-weight: bold;
+    white-space: nowrap;
+} 
+
+
+.footerText1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 4vh;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.footerText2{
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(165, 28, 50);
+    text-align: center;
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+.custom-footer-img {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+
+.ui-dialog-titlebar {
+    background: linear-gradient(to right, rgb(255, 160, 78,1), rgb(133, 7, 63));
+    color: black;
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+/*Naslovna linija--------------------------------------------------------------------------------------------*/
+
+.naslovnaLinija {
+    text-align: center;
+    border-bottom: 3px solid transparent;
+    border-color: orange;
+    width: 70%;
+    padding-bottom: 2rem;
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+/*Detalji novost---------------------------------------------------------------------------------------------*/
+
+
+.kampusSlika {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.slikaNovost2 {
+    width: 100%;
+    height: 37vh;
+    object-fit: cover;
+    object-position: 50% 0;
+}
+
+.custom-icon-size-heading {
+    width: 4rem;
+}
+
+.custom-mt-section {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.slikaKrug {
+    position: relative;
+    text-align: center;
+}
+
+.novostKrug {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    vertical-align: middle;
+    padding: 2rem;
+}
+
+.slikaNovost {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: left;
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.krugTekst {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 200px;
+    color: white;
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
+/*Rozi naslovi-------------------------------------------------------------------------------------------------*/
+
+.heading-color-pink {
+    color: #940e4b;
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
+/*O nama-------------------------------------------------------------------------------------------------------*/
+
+.custom-color-section {
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}
+
+.kakoDoNas{
+    color: blue;
+}
+
+.krasopis {
+    font-family: 'Dancing Script', cursive;
+    width: 70%;
+    margin: 2rem auto 7rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.custom-box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
+}
+
+.custom-color-span {
+    color: rgb(123, 162, 235);
+}
+
+.custom-img-size-cert {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+.custom-icon-size-section {
+    width: 3rem;
+}
+
+.custom-text-shadow {
+    filter: drop-shadow(2px 2px 2px black);
+}
+
+.custom-color-gradient {
+    background: linear-gradient(45deg, rgb(255, 119, 0) 0%, rgb(255, 0, 115) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+}
+
+.custom-px-5 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.custom-py-5 {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+.custom-background-image {
+    position: relative;
+    z-index: 1;
+    padding: 5rem;
+}
+
+.custom-gradient-border {
+    border-style: solid;
+    border-width: 3px;
+    border-image: linear-gradient(90deg, rgb(255, 119, 0) 0%, rgb(255, 0, 115) 100%);
+    border-image-slice: 30;
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+/*Novosti------------------------------------------------------------------------------------------------*/
+
+figure {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+figure .imgZoom {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .5s ease-in-out;
+    max-width: 100%;
+    margin: 0 auto;
+    opacity: 0.7;
+}
+
+figure:hover .imgZoom {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.video-container {
+    margin: 0;
+    padding: 0;
+}
+
+.video-container video {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.textbox-video {
+    color: white;
+    text-align: left;
+    font-size: 6.5rem;
+    position:absolute;
+
+}
+
+
+/*----------------------------------------------------------------------------------------------------*/
+/*Kolegiji tablica------------------------------------------------------------------------------------*/
+
+
+.custom-background-color {
+    background-color: #c7cace;
+}
+
+.table th, .table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #dee2e6;
+}
+
+.table th {
+    background-color: #f8f9fa;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tfoot td {
+    font-weight: bold;
+}
+
+.btn-delete {
+    background-color: rgb(172, 11, 11);
+    border: none;
+    color: white;
+    font-size: 1.6rem;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 10px;
+    padding:0%;
+}
+
+.autocomplete-item {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/*Responzivnost--------------------------------------------------------------------------------------------------*/
+
+
+@media only screen and (max-width: 1200px) {
+    .custom-footer-text {
+        font-size: 3vh;
+    }
+
+    .medialap-border-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .custom-py-5 {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .textbox-img-header {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .trakaLFunk {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: #000;
+        padding: 10px 0;
+        transition: max-height 0.3s ease-in-out;
+        overflow: hidden;
+        max-height: 0;
+    }
+
+    .nav-menu.nav-menu-visible {
+        max-height: 600px;
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .navbar-right {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+
+    .custom-footer-text {
+        font-size: 2.5rem;
+    }
+
+    .custom-background-image {
+        padding: 0;
+    }
+
+    .custom-px-5 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .custom-py-5 {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .textbox-img-header {
+        font-size: 2rem;
+    }
+
+}

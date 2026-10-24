@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registracija</title>
+    <link rel="icon" type="image/x-icon" href="img/Algebra-logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /></head>
+<body>
+    <content>
+        <header>
+            <nav>
+                <div class="navbar">
+                    <div class="navbar-left">
+                        <button class="trakaLFunk" id="trakaLFunk">
+                            <span class="material-symbols-outlined">menu</span>
+                        </button>
+                        <ul id="nav-menu" class="nav-menu animate__animated animate__fadeInLeft">
+                            <li class="prijava"><a href="Prijava.html">Prijavi se<span class="material-symbols-outlined navicon-blue">login</span></a></li>
+                            <li><a href="index.html"><span class="material-symbols-outlined navicon">home</span>Početna</a></li>
+                            <li><a href="Onama.html"><span class="material-symbols-outlined navicon">import_contacts</span>O nama</a></li>
+                            <li><a href="Novosti.html"><span class="material-symbols-outlined navicon">info</span>Novosti</a></li>
+                            <li><a href="#Kontakt" id="contact-link"><span class="material-symbols-outlined navicon">mail</span>Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+<logreg>   
+<div class="logreg-container">
+    <div class="logreg-logo">
+        <img src="img/algebra.svg" alt="Algebra Logo" id="logo"> 
+    </div>
+
+  <form id="logregForm" class="auth-form">
+        <div class="form-group">
+            <label for="username">Korisničko ime</label>
+            <input type="text" id="username" name="username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label for="password">Lozinka</label>
+            <input type="password" id="password" name="password" placeholder="Password">
+        </div>
+        <button type="submit" class="logreg-button">Registriraj me</button>
+    </form>
+	<div class="mt-5">
+	<span class="haveAcc">Imate račun? <a href="Prijava.html">Prijavite se.</a></span>
+</div>
+  <div class="logreg-footer">Sveučilište Algebra</div>
+</div>
+</logreg>
+
+<div id="dialog-message" title="Registracija" style="display: none;" class="contact">
+    <p id="dialog-content"></p>
+</div>
+
+<div class="kontakt" title="Kontaktirajte nas" id="contact-form" style="display: none;">
+    <form action="https://www.fulek.com/mvc/supit/project-contact-form" method="post">
+        <label for="FullName"><p class="bold-text">Puno ime</p></label>
+        <input type="text" id="FullName" name="FullName" required>
+
+        <label for="Email"><p class="bold-text">E-mail</p></label>
+        <input type="email" id="Email" name="Email" required>
+
+        <label for="Importance"><p class="bold-text">Važnost poruke:</p></label>
+        <select id="Importance" name="Importance">
+            <option value="high">Visoka</option>
+            <option value="normal" selected>Normalna</option>
+            <option value="low">Niska</option>
+        </select>
+
+        <label for="Message"><p class="bold-text">Poruka</p></label>
+        <textarea id="Message" name="Message" required style="height:200px"></textarea>
+
+        <p class="bold-text">
+            Želim primati novosti:
+            <input type="checkbox" id="ReceiveNewsletter" name="ReceiveNewsletter" value="true" />
+                    <input type="hidden" name="ReceiveNewsletter" value="false" />
+        </p>
+
+        <input id="submitBtn" class="contButtonSend" type="submit" value="Pošalji">
+    
+    </form>
+</div>
+<footer>
+    <img src="./img/zaiskri-bg.jpg" class="custom-footer-img" alt="zaiskri">
+<div class="footerText1">
+<span class="custom-text-shadow">BUDI IZVRSTAN U ONOM ŠTO VOLIŠ!</span>
+<br>
+<span class="footerText2">ZAISKRI</span>
+</div>
+</footer>
+</content>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init(); 
+    </script>
+
+<script src="js/token.js"></script>
+    <script src="js/navbar.js"></script>
+<script src="js/kontakt.js"></script>
+<script src="js/registracija.js"></script>
+
+</body>
+</html>
